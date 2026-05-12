@@ -1,0 +1,54 @@
+.main-container {
+    display: grid;
+    grid-template: repeat(auto-fit, minmax(300px, 1fr)) / repeat(4, 1fr);
+    max-width: 1280px;
+    max-height: 720px;
+    gap: 12px;
+}
+
+.header-wrapper {
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+    border: 1px solid green;
+}
+
+.sidebar-wrapper {
+    grid-row: 1 / 5;
+    border: 1px solid blue;
+}
+
+.main-content-wrapper {
+    grid-column: 2 / 5;
+    display: flex;
+}
+
+.right-column-wrapper {
+    display: grid;
+}
+
+.project-cards-wrapper {
+    flex-grow: 1;
+    height: auto;
+    border: 1px solid red;
+}
+
+.project-cards {
+    display: grid;
+    grid-template: repeat(auto-fit, minmax(350px, 1fr)) / repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+    max-width: 250px;
+    min-height: 150px;
+    border: 1px solid blueviolet;
+}
+
+.announcements-wrapper {
+    grid-column: 4 / 5;
+    border: 1px solid yellow;
+}
+
+.trending-wrapper {
+    grid-column: 4 / 5;
+    border: 1px solid black;
+}
