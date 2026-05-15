@@ -1,94 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="main-container">
-        <div class="header-wrapper">
-            <div class="search-bar">
-                <img src="./images/magnify.svg" class="magnify-icon header-icon" /> <input type="text" />
-            </div>
-            <div class="top-right-header">
-                <img src="./images/bell-ring-outline.svg" class="bell-icon header-icon" />
-            </div>
+      <div class="header-wrapper">
+        <div class="search-bar">
+          <img src="./images/magnify.svg" class="magnify-icon header-icon" />
+          <input type="text" class="search-bar-input" id="searchBarInput" />
         </div>
-        <div class="sidebar-wrapper">
-            <div class="dashboard-menu sidebar-menu">
-                <img src="./images/view-dashboard.svg" class="dashboard-icon" />
-                Dashboard
-            </div>
-            <div class="home-menu sidebar-menu">
-                <img src="./images/home.svg" class="home-icon sidebar-icon" fill="white" /> Home
-            </div>
-            <div class="profile-menu sidebar-menu">
-                <img src="./images/card-account-details-outline.svg" class="profile-icon sidebar-icon" /> Profile
-            </div>
-            <div class="message-menu sidebar-menu">
-                <img src="./images/message.svg" class="message-icon sidebar-icon" /> Messages
-            </div>
-            <div class="history-menu sidebar-menu">
-                <img src="./images/clock-time-three.svg" class="history-icon sidebar-icon" /> History
-            </div>
-            <div class="tasks-menu sidebar-menu">
-                <img src="./images/note-multiple-outline.svg" class="tasks-icon sidebar-icon" /> Tasks
-            </div>
-            <div class="communities-menu sidebar-menu">
-                <img src="./images/account-group.svg" class="communities-icon sidebar-icon" /> Communities
-            </div>
-            <div class="settings-menu sidebar-menu">
-                <img src="./images/cog.svg" class="settings-icon sidebar-icon" /> Settings
-            </div>
-            <div class="support-menu sidebar-menu">
-                <img src="./images/help-box.svg" class="support-icon sidebar-icon" /> Support
-            </div>
-            <div class="privacy-menu sidebar-menu">
-                <img src="./images/shield-check.svg" class="privacy-icon sidebar-icon" /> Privacy
-            </div>
+        <div class="top-right-header">
+          <img
+            src="./images/bell-ring-outline.svg"
+            class="bell-icon header-icon"
+          />
         </div>
-        <div class="main-content-wrapper">
-            <div class="project-cards-wrapper">
-                <span class="projects-title">Your Projects</span>
-                <div class="project-cards">
-                    <div class="card">
-                        Test Project
-                    </div>
-                    <div class="card">
-                        Test Project
-                    </div>
-                    <div class="card">
-                        Test Project
-                    </div>
-                    <div class="card">
-                        Test Project
-                    </div>
-                    <div class="card">
-                        Test Project
-                    </div>
-                    <div class="card">
-                        Test Project
-                    </div>
-                </div>
-            </div>
-            <div class="right-column-wrapper">
-                <div class="announcements-wrapper">
-                    Announcements
-                    <div class="announcements">
-                    </div>
-                </div>
-                <div class="trending-wrapper">
-                    Trending content
-                    <div class="trending">
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="sidebar-wrapper">
+        <div class="dashboard-menu sidebar-menu">
+          <img src="./images/view-dashboard.svg" class="dashboard-icon" />
+          Dashboard
         </div>
+        <div class="home-menu sidebar-menu">
+          <img
+            src="./images/home.svg"
+            class="home-icon sidebar-icon"
+            fill="white"
+          />
+          Home
+        </div>
+        <div class="profile-menu sidebar-menu">
+          <img
+            src="./images/card-account-details-outline.svg"
+            class="profile-icon sidebar-icon"
+          />
+          Profile
+        </div>
+        <div class="message-menu sidebar-menu">
+          <img src="./images/message.svg" class="message-icon sidebar-icon" />
+          Messages
+        </div>
+        <div class="history-menu sidebar-menu">
+          <img
+            src="./images/clock-time-three.svg"
+            class="history-icon sidebar-icon"
+          />
+          History
+        </div>
+        <div class="tasks-menu sidebar-menu">
+          <img
+            src="./images/note-multiple-outline.svg"
+            class="tasks-icon sidebar-icon"
+          />
+          Tasks
+        </div>
+        <div class="communities-menu sidebar-menu">
+          <img
+            src="./images/account-group.svg"
+            class="communities-icon sidebar-icon"
+          />
+          Communities
+        </div>
+        <div class="settings-menu sidebar-menu">
+          <img src="./images/cog.svg" class="settings-icon sidebar-icon" />
+          Settings
+        </div>
+        <div class="support-menu sidebar-menu">
+          <img src="./images/help-box.svg" class="support-icon sidebar-icon" />
+          Support
+        </div>
+        <div class="privacy-menu sidebar-menu">
+          <img
+            src="./images/shield-check.svg"
+            class="privacy-icon sidebar-icon"
+          />
+          Privacy
+        </div>
+      </div>
+      <div class="main-content-wrapper">
+        <div class="project-cards-wrapper">
+          <span class="projects-title">Your Projects</span>
+          <div class="project-cards">
+            <div class="card">Test Project</div>
+            <div class="card">Test Project</div>
+            <div class="card">Test Project</div>
+            <div class="card">Test Project</div>
+            <div class="card">Test Project</div>
+            <div class="card">Test Project</div>
+          </div>
+        </div>
+        <div class="right-column-wrapper">
+          <div class="announcements-wrapper">
+            Announcements
+            <div class="announcements"></div>
+          </div>
+          <div class="trending-wrapper">
+            Trending content
+            <div class="trending"></div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
