@@ -16,7 +16,35 @@
   padding: 30px 50px 20px 50px;
 }
 
-.header-icon {
+.bell-icon {
+  height: 25px;
+}
+
+.top-right-header {
+  display: grid;
+  grid-template: 1fr / 3vw 4vw 1fr;
+  height: fit-content;
+  align-items: start;
+}
+
+.small-profile-icon {
+  border: 1px solid #facc15;
+  border-radius: 50%;
+  background-color: #facc15;
+  height: 35px;
+  padding: 5px;
+  overflow: visible;
+  position: relative;
+  top: -10px;
+}
+
+.small-user-name {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.magnify-icon {
   height: 30px;
 }
 
@@ -38,7 +66,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   display: grid;
-  padding: 20px 0 0 20px;
+  padding: 1em 0 0 1em;
   grid-template-rows: 2fr repeat(5, 1fr) 2fr repeat(3, 1fr) 4fr;
 }
 
@@ -47,17 +75,26 @@
   grid-auto-flow: column;
   grid-template-columns: 1fr 10fr;
   column-gap: 10px;
-  align-items: center;
   height: fit-content;
   align-items: end;
 }
 
+.sidebar-menu:hover {
+  background-color: #62c1f5;
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  color: white;
+}
+
 .dashboard-menu {
-  font-size: 36px;
+  font-size: 30px;
+  align-items: center;
 }
 
 .dashboard-icon {
-  height: 80px;
+  height: 60px;
   filter: invert(1);
 }
 
