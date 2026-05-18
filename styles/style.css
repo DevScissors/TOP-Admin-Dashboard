@@ -1,47 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+:root {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+}
+
 .main-container {
   display: grid;
-  grid-template: repeat(auto-fit, minmax(300px, 1fr)) / 18vw 1fr 1fr 1fr;
+  grid-template: 1fr 2fr 1fr / 18vw 1fr 1fr 1fr;
   max-width: 1920px;
   max-height: 1080px;
+  height: 100vh;
 }
 
 .header-wrapper {
   grid-column: 2 / 5;
   grid-row: 1 / 2;
-  border: 1px solid green;
   display: grid;
   grid-template: 1fr 1fr / 2fr 1fr;
   padding: 30px 50px 20px 50px;
+  box-shadow: 0 5px 0 #ced3da;
+  z-index: 1;
 }
 
 .bell-icon {
   height: 25px;
-}
-
-.top-right-header {
-  display: grid;
-  grid-template: 1fr / 3vw 4vw 1fr;
-  height: fit-content;
-  align-items: start;
-}
-
-.small-profile-icon {
-  border: 1px solid #facc15;
-  border-radius: 50%;
-  background-color: #facc15;
-  height: 35px;
-  padding: 5px;
-  overflow: visible;
-  position: relative;
-  top: -10px;
-}
-
-.small-user-name {
-  font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
 }
 
 .magnify-icon {
@@ -50,7 +35,7 @@
 
 .search-bar-input {
   vertical-align: top;
-  width: 40vw;
+  width: 35vw;
   border-radius: 15px;
   margin-left: 20px;
   height: 30px;
@@ -58,12 +43,80 @@
   border: none;
 }
 
+.top-right-header {
+  display: grid;
+  grid-template: 1fr / 3vw 4vw 1fr;
+  height: fit-content;
+  align-items: start;
+  margin-left: auto;
+}
+
+.header-profile-icon {
+  border: 1px solid #facc15;
+  border-radius: 50%;
+  background-color: #facc15;
+  overflow: visible;
+}
+
+.small-profile-icon {
+  height: 35px;
+  padding: 5px;
+  position: relative;
+  top: -10px;
+}
+
+.large-profile-icon {
+  height: 50px;
+  padding: 10px;
+}
+
+.small-user-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bottom-left-header {
+  display: grid;
+  grid-template: 1fr / 1fr 8fr;
+}
+
+.header-profile-greeting {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.profile-greeting-text {
+  margin-block-end: 5px;
+}
+
+.large-user-name {
+  font-size: 28px;
+}
+
+.bottom-right-header {
+  align-items: center;
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  margin-left: auto;
+}
+
+.project-button {
+  background-color: #1892d4;
+  color: white;
+  font-size: 16px;
+  border-radius: 20px;
+  width: 5vw;
+  height: 35px;
+  border: 1px solid lightgray;
+  font-weight: 700;
+  margin: 0 0 0 20px;
+}
+
 .sidebar-wrapper {
   grid-row: 1 / 5;
   background-color: #1892d4;
   color: white;
   font-size: 24px;
-  font-family: "Roboto", sans-serif;
   font-weight: 600;
   display: grid;
   padding: 1em 0 0 1em;
@@ -106,60 +159,96 @@
 .main-content-wrapper {
   grid-column: 2 / 5;
   grid-row: 2 / 5;
-  display: flex;
+  display: grid;
+  grid-template: 1fr / 3fr 1fr;
   background-color: #e2e8f0;
+  padding: 20px 20px 20px 40px;
 }
 
 .project-cards-wrapper {
-  flex-grow: 1;
   height: auto;
-  border: 1px solid red;
   display: grid;
   grid-template-rows: 40px 1fr;
+  padding: 20px 20px 0 0;
 }
 
 .projects-title {
-  font-size: 32px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .project-cards {
   display: grid;
   grid-template: repeat(auto-fit, minmax(250px, 1fr)) / repeat(
       auto-fit,
-      minmax(250px, 1fr)
+      minmax(350px, 1fr)
     );
-  padding: 16px;
-  gap: 16px;
+  gap: 0 30px;
+  padding-top: 10px;
 }
 
 .card {
-  max-width: 250px;
-  min-height: 150px;
-  border: 1px solid blueviolet;
+  min-width: 15vw;
+  max-height: 20vh;
   background-color: white;
+  padding: 20px;
+  box-shadow: 3px 5px 5px rgb(0 0 0 / 0.1);
+  border-radius: 0.4em;
+  border-left: 6px solid #facc15;
+  display: grid;
+  grid-template: 1fr 2fr / 1fr;
+}
+
+.card-title {
+  margin: 0;
+  height: fit-content;
+  align-self: self-end;
+  font-weight: 700;
+}
+
+.card-content {
+  margin: 5px 0 0;
+  color: gray;
+}
+
+.card-option-wrapper {
+  text-align: right;
+}
+
+.card-option-icon {
+  height: 25px;
+  padding: 0 10px;
 }
 
 .right-column-wrapper {
   display: grid;
   min-width: 400px;
+  padding-top: 20px;
+}
+
+.news-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 16px;
 }
 
 .announcements-wrapper {
-  border: 1px solid yellow;
+  padding-bottom: 20px;
 }
 
 .announcements {
   height: stretch;
   margin: 16px 16px 32px;
   background-color: white;
+  padding: 20px;
 }
 
 .trending-wrapper {
-  border: 1px solid black;
 }
 
 .trending {
   height: stretch;
   margin: 16px 16px 32px;
   background-color: white;
+  padding: 20px;
 }
