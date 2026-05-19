@@ -117,7 +117,6 @@ body {
   font-size: 24px;
   font-weight: 600;
   display: grid;
-  padding: 1em 0 0 1em;
   grid-template-rows: 2fr repeat(5, 1fr) 2fr repeat(3, 1fr) 4fr;
 }
 
@@ -128,6 +127,7 @@ body {
   column-gap: 10px;
   height: fit-content;
   align-items: end;
+  padding: 20px 25px;
 }
 
 .sidebar-menu:hover {
