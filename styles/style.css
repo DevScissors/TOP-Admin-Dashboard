@@ -11,8 +11,6 @@ body {
   display: grid;
   grid-template: 1fr 2fr 1fr / 18vw 1fr 1fr 1fr;
   max-width: 1920px;
-  max-height: 1080px;
-  height: 100vh;
 }
 
 .header-wrapper {
@@ -160,7 +158,7 @@ body {
   grid-column: 2 / 5;
   grid-row: 2 / 5;
   display: grid;
-  grid-template: 1fr / 3fr 1fr;
+  grid-template: 1fr / 4fr 1fr;
   background-color: #e2e8f0;
   padding: 20px 20px 20px 40px;
 }
@@ -173,23 +171,23 @@ body {
 }
 
 .projects-title {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .project-cards {
   display: grid;
-  grid-template: repeat(auto-fit, minmax(250px, 1fr)) / repeat(
+  grid-template: repeat(auto-fit, minmax(200px, 1fr)) / repeat(
       auto-fit,
-      minmax(350px, 1fr)
+      minmax(380px, 1fr)
     );
-  gap: 0 30px;
+  gap: 20px 30px;
   padding-top: 10px;
 }
 
 .card {
   min-width: 15vw;
-  max-height: 20vh;
+  max-height: 25vh;
   background-color: white;
   padding: 20px;
   box-shadow: 3px 5px 5px rgb(0 0 0 / 0.1);
@@ -199,14 +197,16 @@ body {
   grid-template: 1fr 2fr / 1fr;
 }
 
-.card-title {
+.card-title,
+.announcement-title {
   margin: 0;
   height: fit-content;
   align-self: self-end;
   font-weight: 700;
 }
 
-.card-content {
+.card-content,
+.announcement-content {
   margin: 5px 0 0;
   color: gray;
 }
@@ -222,33 +222,74 @@ body {
 
 .right-column-wrapper {
   display: grid;
-  min-width: 400px;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .news-title {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
-  margin-left: 16px;
 }
 
 .announcements-wrapper {
-  padding-bottom: 20px;
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  height: 50vh;
 }
 
 .announcements {
+  display: grid;
   height: stretch;
-  margin: 16px 16px 32px;
+  margin-bottom: 20px;
   background-color: white;
   padding: 20px;
+  box-shadow: 3px 5px 5px rgb(0 0 0 / 0.1);
+  border-radius: 0.4em;
+}
+
+.announcement-content:not(:last-child) {
+  border-bottom: 1px solid gray;
 }
 
 .trending-wrapper {
+  display: grid;
+  grid-template-rows: 40px 1fr;
 }
 
 .trending {
+  display: grid;
   height: stretch;
-  margin: 16px 16px 32px;
   background-color: white;
   padding: 20px;
+  box-shadow: 3px 5px 5px rgb(0 0 0 / 0.1);
+  border-radius: 0.4em;
+}
+
+.trending-user {
+  display: grid;
+  grid-template: 20px 1fr / 4vw 1fr;
+  padding-bottom: 40px;
+}
+
+.trending-user:last-child {
+  padding: 0;
+}
+
+.trending-user-name {
+  font-weight: 700;
+}
+
+.trending-user-title {
+  grid-column: 2;
+}
+
+.trending-profile-icon {
+  height: 45px;
+}
+
+.trending-cat-icon {
+  height: 30px;
+  border: 7px solid #facc15;
+  border-radius: 50%;
+  background-color: #facc15;
+  overflow: visible;
 }
